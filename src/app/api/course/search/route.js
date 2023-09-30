@@ -8,7 +8,7 @@ export const GET = async (request) => {
   //Modify following line so that it find course with "searchText" variable
   const courses = await prisma.course.findMany({
     where: {
-      courseNo: {
+      title: {
         contains: searchText,
         mode: "insensitive",
       },
